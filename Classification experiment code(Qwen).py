@@ -21,7 +21,7 @@ load_dotenv()
 
 # ================= Configuration =================
 QWEN_API_KEY = os.getenv("QWEN_API_KEY")
-QWEN_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
+QWEN_BASE_URL = 
 QWEN_MODEL_CANDIDATES = ["qwen-plus"]
 client = OpenAI(
     api_key=QWEN_API_KEY,
