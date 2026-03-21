@@ -22,7 +22,7 @@ load_dotenv()
 
 # ================= Configuration =================
 KIMI_API_KEY = os.getenv("KIMI_API_KEY")
-KIMI_BASE_URL = "https://bobdong.cn/v1"
+KIMI_BASE_URL = 
 KIMI_MODEL_CANDIDATES = ["Kimi-K2.5"]
 client = OpenAI(
     api_key=KIMI_API_KEY,
