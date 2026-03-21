@@ -473,10 +473,10 @@ def evaluate_all(item, gen_code):
     }
 
 
-# ================= 4. 主循环 =================
+# ================= 4. Main Loop =================
 def main():
     if not os.path.exists(INPUT_JSON):
-        print(f"❌ 找不到输入文件: {INPUT_JSON}")
+        print(f"❌ Input file not found: {INPUT_JSON}")
         return
 
     with open(INPUT_JSON, 'r', encoding='utf-8') as f:
@@ -500,7 +500,7 @@ def main():
         "sample_records_count": 0,
         "summary_rows_count": 0,
     }
-    # 断点续跑：按 setting + 样本索引恢复，支持中断后继续当前 setting
+    # Resume from breakpoint: recover by setting + sample index, supports resuming current setting after interruption
     completed_settings = set()
     processed_sample_keys = set()
 
@@ -532,21 +532,21 @@ def main():
                         continue
                 if sample_rows or rows or completed_settings:
                     print(
-                        f"♻️ 检测到断点进度：completed_settings={len(completed_settings)} | "
+                        f"♻️ Resume progress detected: completed_settings={len(completed_settings)} | "
                         f"sample={len(sample_rows)} | summary={len(rows)}"
                     )
         except Exception as e:
-            print(f"⚠️ 读取断点进度失败，将从头开始：{e}")
+            print(f"⚠️ Failed to read resume progress, starting from scratch: {e}")
 
-    print(f"🚀 正在启动消融实验 (共 {len(dataset)} 个样本)...")
+    print(f"🚀 Starting ablation experiment ({len(dataset)} samples in total)...")
 
     def save_progress(reason: str) -> None:
-        # 1) 每个样本明细
+        # 1) Details for each sample
         pd.DataFrame(sample_rows).to_csv(OUTPUT_CSV, index=False, encoding='utf-8-sig')
-        # 2) 各 setting 的语言均值及平均值
+        # 2) Language average and overall average for each setting
         lang_avg_rows = [r for r in rows if r.get("Language") in ("python", "javascript", "average")]
         pd.DataFrame(lang_avg_rows).to_csv(OUTPUT_LANG_AVG_CSV, index=False, encoding='utf-8-sig')
-        # 3) 中间状态快照
+        # 3) Intermediate state snapshot
         state["sample_records_count"] = len(sample_rows)
         state["summary_rows_count"] = len(rows)
         state["reason"] = reason
@@ -561,10 +561,10 @@ def main():
                 ensure_ascii=False,
                 indent=2,
             )
-        # 4) 消融总表（兼容原输出）
+        # 4) Overall ablation table (compatible with original output)
         pd.DataFrame(rows).to_csv(OUTPUT_ABLATION_CSV, index=False, encoding='utf-8-sig')
         print(
-            f"💾 已保存进度（{reason}）："
+            f"💾 Progress saved ({reason}): "
             f"sample={len(sample_rows)} | summary={len(rows)}"
         )
 
@@ -610,7 +610,7 @@ def main():
         }
         rows.append(avg_row)
         print(
-            f"[{setting_name}] 当前均值 | "
+            f"[{setting_name}] Current average | "
             f"python(success)={lang_success['python']} CodeBLEU={setting_rows['python']['CodeBLEU']} ES={setting_rows['python']['ES']} | "
             f"javascript(success)={lang_success['javascript']} CodeBLEU={setting_rows['javascript']['CodeBLEU']} ES={setting_rows['javascript']['ES']} | "
             f"average(CodeBLEU={avg_row['CodeBLEU']}, ES={avg_row['ES']})"
