@@ -17,7 +17,7 @@ from codebleu import calc_codebleu
 
 # ================= Configuration =================
 DEEPSEEK_CODER_1_3B_API_KEY = os.getenv("OLLAMA_API_KEY", "")
-DEEPSEEK_CODER_1_3B_API_BASE = "http://127.0.0.1:11434/v1"
+DEEPSEEK_CODER_1_3B_API_BASE = 
 DEEPSEEK_CODER_1_3B_MODEL = "deepseek-coder:1.3b"
 # Replace the placeholder strings below with your own paths before running.
 INPUT_JSON = r"PUT_THE_FULL_PATH_TO_YOUR_INPUT_DATASET_JSON_HERE"
