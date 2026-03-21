@@ -16,7 +16,7 @@ import codebleu.utils
 from codebleu import calc_codebleu
 
 # ================= Configuration =================
-OLLAMA_URL = "http://localhost:11434/api/generate"
+OLLAMA_URL = 
 OLLAMA_MODEL = "deepseek-coder:1.3b"
 MAX_WORKERS = 2
 CHECKPOINT_INTERVAL = 100
