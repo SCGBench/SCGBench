@@ -91,11 +91,11 @@ OPENAI_API_KEY=your_openai_key_here
 4. Running the Experiments
 We provide dedicated evaluation scripts for different models (e.g., GPT, Qwen, DeepSeek, Kimi). Before running a script, open the .py file and configure the file paths (e.g., INPUT_JSON, OUTPUT_CSV) to point to your local unzipped datasets.
 
-RQ1 (Overall Performance): Run the Test experiment code([Model]).py scripts using the Ablation + test experiment dataset(17042).json.
+* **RQ1 (Overall Performance):** Run the Test experiment code([Model]).py scripts using the Ablation + test experiment dataset(17042).json.
 
-RQ2 (Ablation Study): Run the Ablation experiment code([Model]).py scripts using the Ablation + test experiment dataset(17042).json.
+* **RQ2 (Ablation Study):** Run the Ablation experiment code([Model]).py scripts using the Ablation + test experiment dataset(17042).json.
 
-RQ3 (Service Type Classification): Run the Classification experiment code([Model]).py scripts using the Classification experiment dataset(17042).json.
+* **RQ3 (Service Type Classification):** Run the Classification experiment code([Model]).py scripts using the Classification experiment dataset(17042).json.
 
 Note: The scripts feature auto-saving and checkpointing. If interrupted, simply rerun the script, and it will resume from the last saved state.
 
@@ -201,11 +201,11 @@ OPENAI_API_KEY=在此处填入您的openai密钥
 4. 运行实验
 我们为不同的模型（如 GPT, Qwen, DeepSeek, Kimi）提供了专门的评估脚本。在运行之前，请打开相应的 .py 文件，修改文件中的路径配置（如 INPUT_JSON, OUTPUT_CSV），将其指向您本地解压后的数据集。
 
-RQ1 (整体性能基准): 使用 Ablation + test experiment dataset(17042).json 数据集运行 Test experiment code([Model]).py 脚本。
+* **RQ1 (整体性能基准):** 使用 Ablation + test experiment dataset(17042).json 数据集运行 Test experiment code([Model]).py 脚本。
 
-RQ2 (消融实验): 使用 Ablation + test experiment dataset(17042).json 数据集运行 Ablation experiment code([Model]).py 脚本。
+* **RQ2 (消融实验):** 使用 Ablation + test experiment dataset(17042).json 数据集运行 Ablation experiment code([Model]).py 脚本。
 
-RQ3 (服务类型分类实验): 使用 Classification experiment dataset(17042).json 数据集运行 Classification experiment code([Model]).py 脚本。
+* **RQ3 (服务类型分类实验):** 使用 Classification experiment dataset(17042).json 数据集运行 Classification experiment code([Model]).py 脚本。
 
 注：脚本内置了自动保存和断点续跑功能。如果运行被中断，重新执行脚本即可从上次保存的进度继续。
 
