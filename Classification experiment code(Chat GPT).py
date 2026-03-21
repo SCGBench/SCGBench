@@ -21,7 +21,7 @@ load_dotenv()
 
 # ================= Config =================
 CHATGPT_API_KEY = os.getenv("OPENAI_API_KEY")
-CHATGPT_BASE_URL = "https://xh.v1api.cc/v1"
+CHATGPT_BASE_URL = 
 CHATGPT_MODEL_CANDIDATES = ["gpt-4.1-mini"]
 client = OpenAI(
     api_key=CHATGPT_API_KEY,
