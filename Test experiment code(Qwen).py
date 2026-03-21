@@ -21,7 +21,7 @@ load_dotenv()
 # ================= Configuration =================
 QWEN_API_KEY = os.getenv("QWEN_API_KEY")
 QWEN_BASE_URL = 
-QWEN_MODEL_CANDIDATES = ["qwen-plus", "qwen-turbo"]
+QWEN_MODEL_CANDIDATES = ["qwen-plus"]
 MAX_WORKERS = 8
 CHECKPOINT_INTERVAL = 100
 client = OpenAI(
