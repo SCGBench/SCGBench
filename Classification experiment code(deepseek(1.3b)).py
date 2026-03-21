@@ -18,7 +18,7 @@ from codebleu import calc_codebleu
 
 # ================= Configuration =================
 DEEPSEEK_CODER_1_3B_API_KEY = os.getenv("OLLAMA_API_KEY", "")
-DEEPSEEK_CODER_1_3B_BASE_URL = "http://127.0.0.1:11434/v1"
+DEEPSEEK_CODER_1_3B_BASE_URL = 
 DEEPSEEK_CODER_1_3B_MODEL_CANDIDATES = ["deepseek-coder:1.3b"]
 client = OpenAI(
     api_key=DEEPSEEK_CODER_1_3B_API_KEY,
