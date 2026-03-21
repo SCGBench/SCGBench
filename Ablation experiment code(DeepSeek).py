@@ -19,7 +19,7 @@ load_dotenv()
 
 # ================= Configuration =================
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY")
-DEEPSEEK_API_BASE = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
+DEEPSEEK_API_BASE = os.getenv("DEEPSEEK_BASE_URL")
 DEEPSEEK_MODEL = "deepseek-chat"
 INPUT_JSON = r"PUT_THE_FULL_PATH_TO_YOUR_INPUT_DATASET_JSON_HERE"
 OUTPUT_CSV = r"PUT_THE_FULL_PATH_TO_THE_OUTPUT_CSV_FILE_HERE"
