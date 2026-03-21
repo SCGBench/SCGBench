@@ -19,8 +19,8 @@ load_dotenv()
 
 # ================= Configuration =================
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_BASE_URL = "https://api.openai.com/v1"
-OPENAI_MODEL_CANDIDATES = ["gpt-4.1-mini", "gpt-4o-mini"]
+OPENAI_BASE_URL = 
+OPENAI_MODEL_CANDIDATES = ["gpt-4.1-mini"]
 client = OpenAI(
     api_key=OPENAI_API_KEY,
     base_url=OPENAI_BASE_URL,
