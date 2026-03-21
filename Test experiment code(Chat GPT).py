@@ -20,7 +20,7 @@ load_dotenv()
 
 # ================= Configuration =================
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-OPENAI_BASE_URL = "https://xh.v1api.cc/v1"
+OPENAI_BASE_URL = 
 OPENAI_MODEL_CANDIDATES = ["gpt-4.1-mini"]
 MAX_WORKERS = 8
 CHECKPOINT_INTERVAL = 100
